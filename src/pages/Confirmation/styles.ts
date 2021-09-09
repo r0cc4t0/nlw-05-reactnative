@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'space-around',
-    backgroundColor: colors.white
+    backgroundColor: colors.background
   },
   content: {
     flex: 1,
