@@ -4,24 +4,18 @@ import fonts from '../../../styles/fonts';
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
+    maxWidth: '45%',
     backgroundColor: colors.shape,
-    width: 76,
-    height: 40,
-    justifyContent: 'center',
+    borderRadius: 20,
+    paddingVertical: 10,
     alignItems: 'center',
-    borderRadius: 12,
-    marginHorizontal: 5
-  },
-  containerActive: {
-    backgroundColor: colors.green_light
+    margin: 10
   },
   text: {
-    color: colors.heading,
-    fontFamily: fonts.text
-  },
-  textActive: {
     color: colors.green_dark,
-    fontFamily: fonts.heading
+    fontFamily: fonts.heading,
+    marginVertical: 16
   }
 });
 
