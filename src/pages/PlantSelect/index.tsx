@@ -99,7 +99,7 @@ export default function PlantSelect() {
   }
 
   function handlePlantSelect(plant: PlantProps) {
-    navigation.navigate('PlantSave');
+    navigation.navigate('PlantSave', { plant });
   }
 
   if (loading) {
