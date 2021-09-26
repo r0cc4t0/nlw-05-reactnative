@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     margin: 10
   },
-  text: {
+  title: {
     color: colors.green_dark,
     fontFamily: fonts.heading,
     marginVertical: 16
