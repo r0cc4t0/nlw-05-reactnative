@@ -8,7 +8,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     paddingHorizontal: 30,
-    paddingTop: 20,
     backgroundColor: colors.background
   },
   spotlight: {
@@ -39,6 +38,9 @@ const styles = StyleSheet.create({
     fontFamily: fonts.heading,
     color: colors.heading,
     marginVertical: 20
+  },
+  flatlist: {
+    marginBottom: 5
   }
 });
 

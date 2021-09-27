@@ -142,6 +142,7 @@ export default function PlantSelect() {
               ? <ActivityIndicator color={colors.green} />
               : <></>
           }
+          style={styles.flatlist}
         />
       </View>
     </View>

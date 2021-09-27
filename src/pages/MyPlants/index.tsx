@@ -53,7 +53,7 @@ export default function MyPlants() {
             <PlantCardSecondary data={item} />
           )}
           showsVerticalScrollIndicator={false}
-          contentContainerStyle={{ flex: 1 }}
+          style={styles.flatlist}
         />
       </View>
     </View>
