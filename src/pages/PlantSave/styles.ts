@@ -43,8 +43,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.blue_light,
     padding: 20,
     borderRadius: 20,
-    position: 'relative',
-    bottom: 70
+    marginBottom: 20
   },
   tipImage: {
     width: 56,

@@ -1,8 +1,10 @@
 import React from 'react';
-import { View, Text } from 'react-native';
-import { RectButton, RectButtonProps } from 'react-native-gesture-handler';
+import { View, Text, Animated } from 'react-native';
+import { RectButton, RectButtonProps, Swipeable } from 'react-native-gesture-handler';
 import { SvgFromUri } from 'react-native-svg';
+import { Feather } from '@expo/vector-icons';
 import styles from './styles';
+import colors from '../../../styles/colors';
 
 interface PlantProps extends RectButtonProps {
   data: {
@@ -10,20 +12,31 @@ interface PlantProps extends RectButtonProps {
     photo: string;
     hour: string;
   };
+  handleRemove: () => void;
 };
 
-export default function PlantCardSecondary({ data, ...rest }: PlantProps) {
+export default function PlantCardSecondary({ data, handleRemove, ...rest }: PlantProps) {
   return (
-    <RectButton style={styles.container} {...rest}>
-      <SvgFromUri uri={data.photo} width={50} height={50} />
+    <Swipeable overshootRight={false} renderRightActions={() => (
+      <Animated.View>
+        <View>
+          <RectButton style={styles.buttonRemove} onPress={handleRemove}>
+            <Feather name="trash" size={32} color={colors.white} />
+          </RectButton>
+        </View>
+      </Animated.View>
+    )}>
+      <RectButton style={styles.container} {...rest}>
+        <SvgFromUri uri={data.photo} width={50} height={50} />
 
-      <Text style={styles.title}>{data.name}</Text>
+        <Text style={styles.title}>{data.name}</Text>
 
-      <View style={styles.details}>
-        <Text style={styles.timeLabel}>Regar às</Text>
+        <View style={styles.details}>
+          <Text style={styles.timeLabel}>Regar às</Text>
 
-        <Text style={styles.time}>{data.hour}</Text>
-      </View>
-    </RectButton>
+          <Text style={styles.time}>{data.hour}</Text>
+        </View>
+      </RectButton>
+    </Swipeable>
   );
 }
